@@ -493,14 +493,16 @@ export default function App() {
           </div>
           
           <div className="reveal glass rounded-3xl overflow-hidden max-w-4xl mx-auto shadow-2xl">
-            <iframe 
-              src="https://calendly.com/andreavilasouza14/treino-experimental-15" 
-              width="100%" 
-              height="700" 
-              frameBorder="0" 
-              scrolling="no"
-              title="Calendly Scheduling"
-            ></iframe>
+           <div className="text-center p-12">
+  <a
+    href="https://silvafitness.buk.pt"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-3 glass px-10 py-5 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
+  >
+    Marcar Treino Agora
+  </a>
+</div>
           </div>
         </div>
       </section>
