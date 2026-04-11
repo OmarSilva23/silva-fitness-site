@@ -151,7 +151,7 @@ export default function App() {
           </div>
           
           <p className="hero-sub text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-            Transforme o seu corpo e mente em Loures. Treino experimental de alta performance por apenas <span className="text-white font-bold">€15</span>.
+            Melhoramos o teu condicionamneto e energia. Treino experimental de alta performance por apenas <span className="text-white font-bold">€15</span>.
           </p>
 
           <div className="hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">
