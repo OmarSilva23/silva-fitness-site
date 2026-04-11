@@ -7,10 +7,6 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { 
-  Dumbbell, 
-  Flame, 
-  Timer, 
-  Target, 
   MapPin, 
   Instagram, 
   Facebook, 
@@ -31,23 +27,9 @@ function cn(...inputs: ClassValue[]) {
 export default function App() {
   const heroRef = useRef<HTMLDivElement>(null);
   const bentoRef = useRef<HTMLDivElement>(null);
-  const trustindexRef = useRef<HTMLDivElement>(null);
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   useEffect(() => {
-    // Trustindex Widget Loader - Injected directly into the section container
-    // Ensure it only runs once and doesn't duplicate
-    const existingScript = document.getElementById('trustindex-loader');
-    if (trustindexRef.current && !existingScript) {
-      const script = document.createElement('script');
-      script.id = 'trustindex-loader';
-      script.src = 'https://cdn.trustindex.io/loader.js?0d71a136789f646178463ff86f5';
-      script.async = true;
-      script.defer = true;
-      trustindexRef.current.appendChild(script);
-    }
-
-    // Hero Entrance Animation
     const ctx = gsap.context(() => {
       gsap.from('.hero-title', {
         y: 100,
@@ -73,7 +55,6 @@ export default function App() {
         ease: 'back.out(1.7)'
       });
 
-      // Scroll Reveal Animations
       const sections = document.querySelectorAll('.reveal');
       sections.forEach((section) => {
         gsap.from(section, {
@@ -94,6 +75,7 @@ export default function App() {
   }, []);
 
   const CTA_LINK = "#agendamento";
+  const GOOGLE_REVIEWS_LINK = "https://www.google.com/maps?q=SilvaFitness.pt,+R.+Avelar+Brotero+37,+2670-418+Loures&ftid=0xd192dc5077899f1:0x202be708e128dfec&entry=gps&lucs=,94231188,47071704,94218641,94282134,94286869&g_ep=CAISEjI1LjIwLjAuNzU3ODEwNjA5MBgAIIgnKi0sOTQyMzExODgsNDcwNzE3MDQsOTQyMTg2NDEsOTQyODIxMzQsOTQyODY4NjlCAlBU&skid=6bbe64ae-abfd-408c-84c9-6fc35c80d086&g_st=com.google.maps.preview.copy";
 
   return (
     <div className="min-h-screen font-sans selection:bg-white selection:text-black">
@@ -150,7 +132,6 @@ export default function App() {
 
       {/* Hero Section */}
       <section id="hero" className="relative h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
-        {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop" 
@@ -189,7 +170,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
           <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
           <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
@@ -222,7 +202,6 @@ export default function App() {
           </div>
 
           <div className="space-y-32">
-            {/* Bloco 1 */}
             <div className="reveal grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <div className="rounded-3xl overflow-hidden glass aspect-video lg:aspect-square">
                 <iframe 
@@ -242,7 +221,6 @@ export default function App() {
               </div>
             </div>
 
-            {/* Bloco 4 */}
             <div className="reveal grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <div className="lg:order-2 rounded-3xl overflow-hidden glass aspect-video lg:aspect-square">
                 <iframe 
@@ -399,7 +377,6 @@ export default function App() {
                 referrerPolicy="no-referrer"
               />
             </div>
-            {/* Floating Badge */}
             <div className="absolute -bottom-10 -left-10 glass p-8 rounded-3xl hidden md:block">
               <div className="text-5xl font-display mb-1">€15</div>
               <div className="text-xs uppercase tracking-widest text-white/50">Treino Experimental</div>
@@ -408,7 +385,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Google Reviews */}
       <section id="resultados" className="py-32 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20 reveal">
@@ -417,8 +394,24 @@ export default function App() {
             </h2>
           </div>
 
-          <div className="reveal py-8 w-full mx-auto" ref={trustindexRef}>
-            {/* Trustindex widget will be rendered here by the script */}
+          <div className="reveal py-8 w-full mx-auto">
+            <div className="glass rounded-3xl p-8 md:p-12 text-center max-w-4xl mx-auto">
+              <div className="text-2xl md:text-3xl mb-4">★★★★★</div>
+              <h3 className="font-display text-2xl md:text-4xl uppercase tracking-tight mb-6">
+                Veja as nossas avaliações no Google
+              </h3>
+              <p className="text-white/60 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+                Conheça as experiências reais dos nossos alunos e descubra porque a Silva Fitness é uma referência em Loures.
+              </p>
+              <a
+                href={GOOGLE_REVIEWS_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 glass px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
+              >
+                Ver avaliações no Google <ArrowRight size={16} />
+              </a>
+            </div>
           </div>
         </div>
       </section>
