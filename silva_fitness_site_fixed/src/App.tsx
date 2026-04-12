@@ -151,7 +151,7 @@ export default function App() {
           </div>
           
           <p className="hero-sub text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-            Melhoramos o teu condicionamneto e energia a partir de <span className="text-white font-bold">€15</span>.
+            Melhoramos o teu condicionamento e energia a partir de <span className="text-white font-bold">€15</span>.
           </p>
 
           <div className="hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -456,14 +456,14 @@ export default function App() {
                 <Instagram className="text-white mt-1" />
                 <div>
                   <p className="text-white font-bold uppercase mb-1">Instagram</p>
-                  <p>@silvafitness</p>
+                  <p>@silvafitness.pt</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <Facebook className="text-white mt-1" />
                 <div>
                   <p className="text-white font-bold uppercase mb-1">Facebook</p>
-                  <p>Silva Fitness</p>
+                  <p>silvafitness</p>
                 </div>
               </div>
             </div>
@@ -472,7 +472,7 @@ export default function App() {
               <h4 className="text-xl font-display uppercase mb-4">Horário de Funcionamento</h4>
               <div className="flex justify-between text-sm py-2 border-b border-white/5">
                 <span>Segunda - Sexta</span>
-                <span>07:00 - 21:00</span>
+                <span>06:00 - 22:00</span>
               </div>
               <div className="flex justify-between text-sm py-2">
                 <span>Sábado</span>
