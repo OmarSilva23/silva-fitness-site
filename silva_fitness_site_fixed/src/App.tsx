@@ -472,10 +472,6 @@ export default function App() {
               <div className="flex justify-between text-sm py-2 border-b border-white/5">
                 <span>Segunda - Sexta</span>
                 <span>06:00 - 22:00</span>
-                 <div className="flex justify-between text-sm py-2">
-                <span>Sábado</span>
-                <span>09:00 - 14:00</span>
-              </div>
               </div>
             </div>
           </div>
