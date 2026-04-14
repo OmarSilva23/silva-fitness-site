@@ -75,8 +75,7 @@ export default function App() {
   }, []);
 
   const CTA_LINK = "#agendamento";
-  const GOOGLE_REVIEWS_LINK = "https://www.google.com/maps/place/SilvaFitness.pt/@38.8319001,-9.1769696,17z/data=!4m18!1m9!3m8!1s0xd192dc5077899f1:0x202be708e128dfec!2sSilvaFitness.pt!8m2!3d38.8319001!4d-9.1769696!9m1!1b1!16s%2Fg%2F11pyc6nxqp!3m7!1s0xd192dc5077899f1:0x202be708e128dfec!8m2!3d38.8319001!4d-9.1769696!9m1!1b1!16s%2Fg%2F11pyc6nxqp?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D;
-
+  const GOOGLE_REVIEWS_LINK = "https://www.google.com/maps?q=SilvaFitness.pt,+R.+Avelar+Brotero+37,+2670-418+Loures&ftid=0xd192dc5077899f1:0x202be708e128dfec&entry=gps&lucs=,94231188,47071704,94218641,94282134,94286869&g_ep=CAISEjI1LjIwLjAuNzU3ODEwNjA5MBgAIIgnKi0sOTQyMzExODgsNDcwNzE3MDQsOTQyMTg2NDEsOTQyODIxMzQsOTQyODY4NjlCAlBU&skid=6bbe64ae-abfd-408c-84c9-6fc35c80d086&g_st=com.google.maps.preview.copy";
   return (
     <div className="min-h-screen font-sans selection:bg-white selection:text-black">
       {/* Header */}
